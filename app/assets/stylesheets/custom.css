@@ -1,0 +1,44 @@
+header a, header a:hover {
+  text-decoration:none;
+}
+body {
+  padding-top: 50px;
+}
+nav {
+  text-align:center;
+  padding-left: 0;
+  margin-left: 0;
+}
+nav ul {
+  padding:0;
+  margin: 0;
+}
+nav li {
+  list-style: none;
+  display:inline;
+  padding-right: 0.5em;
+}
+#main_area {
+  padding: 1em;
+  background-color: #cdf;
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  min-height: 20em;
+}
+footer {
+  font-size: 0.5em;
+  text-align: left;
+}
+article {
+  display: table;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+#guess form {
+  margin: 5px auto;
+}
+#guess a {
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+<%= form_for(guess, html: {class: 'form-horizontal'}) do |f| %>
+  <%= f.hidden_field :listing_id %>
+  <%= f.hidden_field :price %>
+  <div class="form-actions">
+    <%= f.submit number_to_currency(guess.price, precision: 0), class: 'btn btn-primary' %>
+  </div>
+<% end -%>

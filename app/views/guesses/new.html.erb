@@ -1,0 +1,8 @@
+<% title 'How Much is That House?' %>
+
+<%= image_tag @listing.image_url %>
+
+<div id="guess">
+  <%= render @guesses %>
+  <%= link_to 'View Details', "http://www.zoopla.co.uk/for-sale/details/#{@listing.listing_id}", class: 'btn btn-info', target: '_blank' %>
+</div>

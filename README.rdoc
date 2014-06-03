@@ -1,0 +1,13 @@
+== About
+
+== Installation
+
+Upload application archeve into the server,
+extract it and move into that directory.
+
+Copy config/database.yml.sample into config/database.yml
+and fill it with database credentials for production environment.
+
+Migrate database:
+  rake db:create db:migrate RAILS_ENV=production
+

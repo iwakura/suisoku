@@ -1,0 +1,15 @@
+<% title 'Viewed Listings' %>
+
+<% unless @guesses.blank? -%>
+  <div>
+    Number of guesses: <%= @guesses.size %><br />
+    Successful guesses: <%= @guesses.select(&:successful).size %>
+  </div>
+  <ul class="list-unstyled">
+    <% @guesses.each do |guess| -%>
+      <li><%= link_to guess.listing_id, "http://www.zoopla.co.uk/for-sale/details/#{guess.listing_id}" %></li>
+    <% end -%>
+  </ul>
+<% else  -%>
+  <p>You have no viewed listings.</p>
+<% end -%>

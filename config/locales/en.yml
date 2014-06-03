@@ -1,0 +1,6 @@
+en:
+  title: suisoku
+  number:
+    currency:
+      format:
+        unit: "&pound;"
