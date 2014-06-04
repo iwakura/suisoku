@@ -23,6 +23,7 @@ end
 group :test do
   gem 'fabrication'
   gem 'ffaker'
+  gem 'webmock', require: false
 end
 
 group :production do
