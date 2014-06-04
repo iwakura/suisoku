@@ -1,17 +1,12 @@
 source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 gem 'pg'
-gem 'bcrypt-ruby'
-gem 'zoopla'
-gem 'curb', '0.7.18'
+gem 'bcrypt'
+gem 'zoopla', git: 'https://github.com/iwakura/zoopla.git'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-#gem 'coffee-rails', '~> 4.0.0'
 gem 'sass-rails', '~> 4.0.3'
-#gem 'jbuilder', '~> 2.0'
-#gem 'turbolinks'
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
   gem 'thin', require: false

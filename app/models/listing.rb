@@ -1,15 +1,3 @@
-module Zoopla
-  module Listings
-    module Listing
-      def by_id(listing_id)
-        ensure_valid_parameter('listing id', listing_id, lambda {|k| k.is_a? Fixnum and k >= 0})
-        @request[:listing_id] = listing_id
-        self
-      end
-    end
-  end
-end
-
 module Listing
 
   def self.random_for(user)
@@ -24,11 +12,11 @@ module Listing
 
   def self.by_id(listing_id)
     list = []
-    api.by_id(listing_id).each {|item| list << item }
+    api.listing_id(listing_id).each {|item| list << item }
     list.first
   end
 
   def self.api
-    Zoopla::Listings::Sales.new(ENV['ZOOPLA_KEY'])
+    Zoopla.new(ENV['ZOOPLA_KEY']).sales
   end
 end
