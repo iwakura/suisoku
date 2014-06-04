@@ -7,13 +7,7 @@ class GuessesController < ApplicationController
 
   def new
     @listing = Listing.random_for current_user
-    master_price = @listing.price
-    prices = [master_price]
-    2.times { prices << master_price.send((rand < 0.5 ? :+ : :-), master_price * ((rand * 40).to_i/100.0)).to_i }
-    prices.shuffle!
-    @guesses = prices.collect do |price|
-      @guess = Guess.new listing_id: @listing.listing_id, price: price
-    end
+    @guesses = Guess.prepare_for(@listing)
   end
 
   def create
