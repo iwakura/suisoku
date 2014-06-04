@@ -4,7 +4,7 @@ module Listing
     guessed = user.guesses.pluck(:listing_id)
     sales = []
     api.houses.in(postcode: 'NW1 0DU').within(50).order_by(:age).each do |item|
-      sales << item unless guessed.member?(item.listing_id)
+      sales << item unless guessed.member?(item.listing_id) || item.price.zero?
       break if (0 == sales.size % 10) && sales.size > 1
     end
     sales.shuffle.first
