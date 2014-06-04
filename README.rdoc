@@ -8,6 +8,8 @@ extract it and move into that directory.
 Copy config/database.yml.sample into config/database.yml
 and fill it with database credentials for production environment.
 
+Set environment variables ZOOPLA_KEY and SECRET_KEY_BASE.
+
 Migrate database:
   rake db:create db:migrate RAILS_ENV=production
 
