@@ -1,5 +1,7 @@
 == About
 
+Demo application for real estate price guessing.
+
 == Installation
 
 Upload application archeve into the server,
